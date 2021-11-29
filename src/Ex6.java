@@ -1,16 +1,21 @@
 public class Ex6 {
     public static void main(String[] args) {
-        int[]numbers1 = {23,40,70,10,50,70};
+        int[]numbers1 = {20,40,70,10,50,70};
         int[]numbers2 = {30,90,10,10,20,10,50};
         int[] intersectionArr = intersectionArray(numbers1,numbers2);
         if(!isDoubleDigit(numbers1) || !isDoubleDigit(numbers2)){
             System.out.println("The array is not double digits");
+
         }
-        for (int i = 0; i< intersectionArr.length;i++){
-            System.out.print(intersectionArr[i]+", ");
+        else{
+            for (int i = 0; i< intersectionArr.length;i++) {
+                System.out.print(intersectionArr[i] + ", ");
+            }
+            System.out.println("");
+            System.out.println("Is the array foreign? "+isForeign(numbers1,numbers2));
+
         }
-        System.out.println("");
-        System.out.println("Is the array foreign? "+isForeign(numbers1,numbers2));
+
 
     }
     public static boolean isDoubleDigit(int[]arr){
